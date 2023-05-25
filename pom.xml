@@ -21,27 +21,72 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 <!--        dependencies version-->
+        <allure.report.version>2.22.0</allure.report.version>
+        <allure.maven.version>2.12.0</allure.maven.version>
+        <aspectj.version>1.8.10</aspectj.version>
         <lombock.version>1.18.26</lombock.version>
         <selenium.version>4.9.1</selenium.version>
         <testng.version>7.7.1</testng.version>
+        <jackson.version>2.15.1</jackson.version>
+        <junit.version>5.9.3</junit.version>
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
-        <logback.version>logback</logback.version>
+        <logback.version>1.4.7</logback.version>
+        <okhttp.version>4.11.0</okhttp.version>
+        <resat.assured.version>5.3.0</resat.assured.version>
 
 <!--        plugins version-->
-        <surefire.plugin.version>3.0.0</surefire.plugin.version>
+        <surefire.plugin.version>3.0.0-M3</surefire.plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>web-elements</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>webdrivermanager</artifactId>
                 <version>${webdrivermanager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-junit5</artifactId>
+                <version>${allure.report.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${resat.assured.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -54,6 +99,13 @@
                 <artifactId>selenium-java</artifactId>
                 <version>${selenium.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest</artifactId>
+                <version>2.2</version>
+            </dependency>
+
+
 
 
             <!--        dependencies for test   -->
@@ -61,6 +113,18 @@
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
