@@ -5,6 +5,7 @@ import org.example.configuration.WebDriverProvider;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 @Slf4j
 public abstract class BaseTest {
