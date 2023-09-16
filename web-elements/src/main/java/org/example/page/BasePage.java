@@ -12,7 +12,7 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    protected void goToPage(String url){
+    protected void goToPage(String url) {
         driver.get(url);
     }
 
