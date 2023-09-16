@@ -26,6 +26,7 @@
         <testng.version>7.8.0</testng.version>
         <junit-jupiter-api.version>5.10.0</junit-jupiter-api.version>
         <selenide.version>6.16.1</selenide.version>
+        <webdrivermanager.version>5.4.1</webdrivermanager.version>
     </properties>
 
     <dependencyManagement>
@@ -37,10 +38,16 @@
                 <version>${selenide.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.github.bonigarcia</groupId>
+                <artifactId>webdrivermanager</artifactId>
+                <version>${webdrivermanager.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>${selenium.version}</version>
             </dependency>
+
 
 <!--            Test dependencies   -->
             <dependency>
